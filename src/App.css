@@ -1,6 +1,14 @@
+:root{
+  --secondry-color:#18181c;
+  --primary-color:#080808;
+  --basic-color:#ffffff;
+  --highlight-color:#dfe31d;
+}
+
+
 .navbar{
-  background-color: #18181c;
-  color: #fff;
+  background-color: var(--secondry-color);
+  color: var(--basic-color);
   display: flex;
   justify-content: space-between;
   padding: 30px 50px;
@@ -14,12 +22,12 @@
 } 
 
 .navbar button{
-  background-color: #18181c;
-  color: white;
+  background-color: var(--secondry-color);
+  color: var(--basic-color);
   font-size: 1em;
 }
 .navbar button:hover{
-  color: #dfe31d;
+  color: var(--highlight-color);
 }
 
 .cart-container button{
@@ -33,7 +41,7 @@
 /* Home Page */
 
 .home-page-container{
-  color: #fff;
+  color: var(--basic-color);
   padding: 100px 0px ;
   display: flex;
   flex-direction: column;
@@ -43,7 +51,7 @@
 
 .home-page-container button{
   margin-top: 70px;
-  background-color:#dfe31d ;
+  background-color:var(--highlight-color) ;
   padding: 20px;
   font-size: 0.5em;
   border-radius: 20px;
