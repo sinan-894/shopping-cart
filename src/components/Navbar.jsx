@@ -5,8 +5,8 @@ function Navbar(){
     return(
         <div className="navbar">
             <div className="navbar-pages">
-                <button>HomePage</button>
-                <button>ShopPage</button>
+                <button>Home Page</button>
+                <button>Shop Page</button>
             </div>
             <div className="cart-container">
                 <button> <ShoppingCart></ShoppingCart> Cart</button>

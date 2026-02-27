@@ -6,7 +6,25 @@
   padding: 30px 50px;
 }
 
+.navbar-pages{
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+
+} 
+
 .navbar button{
   background-color: #18181c;
   color: white;
+  font-size: 1em;
 }
+.navbar button:hover{
+  color: #dfe31d;
+}
+
+.cart-container button{
+  display: flex;
+  align-items: center ;
+  gap: 10px;
+}
+
