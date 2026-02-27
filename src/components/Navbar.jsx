@@ -1,5 +1,5 @@
 
-
+import { ShoppingCart } from 'lucide-react';
 
 function Navbar(){
     return(
@@ -9,7 +9,7 @@ function Navbar(){
                 <button>ShopPage</button>
             </div>
             <div className="cart-container">
-                <button>cart</button>
+                <button> <ShoppingCart></ShoppingCart> cart</button>
             </div>
         </div>
     )
