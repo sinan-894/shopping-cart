@@ -9,7 +9,7 @@ function Navbar(){
                 <button>ShopPage</button>
             </div>
             <div className="cart-container">
-                <button> <ShoppingCart></ShoppingCart> cart</button>
+                <button> <ShoppingCart></ShoppingCart> Cart</button>
             </div>
         </div>
     )
