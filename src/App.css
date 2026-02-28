@@ -105,6 +105,10 @@
   margin-bottom: 5px;
 }
 
+.rate-cart{
+  display: flex;
+  justify-content: space-between;
+}
 
 .item-container img{
   width: 50%;

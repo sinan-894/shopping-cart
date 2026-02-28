@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Star } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 
 function ShopPage(){
     const [dataJson,setData] = useState([])
@@ -37,8 +38,11 @@ function Item({title,imageUrl,price,rating}){
                 <img src={imageUrl} alt="" />
             </div>
             <div className="discription-container">
-                <div className="rating-container">
-                    <Star size={12} fill="#e0e52a" color="#e0e52a"></Star><span>{rating}</span>
+                <div className="rate-cart">
+                    <div className="rating-container">
+                        <Star size={12} fill="#e0e52a" color="#e0e52a"></Star><span>{rating}</span>
+                    </div>
+                    <ShoppingCart></ShoppingCart>
                 </div>
                 <p className="price-tag">${price}</p>
                 <p className="product-title">{title}</p>
