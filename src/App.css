@@ -63,18 +63,48 @@
 
 .shop-container{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(4,1fr);
   gap: 20px;
   padding: 60px 100px;
 }
 
 .item-container{
+  
+  
+  color: var(--basic-color);
+}
+
+.image-container{
   background-color: var(--secondry-color);
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 300px;
   border-radius: 20px;
 }
+
+.rating-container{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.price-tag{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.product-title{
+  font-size: 1em;
+  font-weight: lighter;
+}
+.discription-container{
+  padding: 10px;
+}
+.discription-container > *{
+  margin-bottom: 5px;
+}
+
 
 .item-container img{
   width: 50%;
