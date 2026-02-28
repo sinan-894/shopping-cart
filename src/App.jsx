@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar"
 import "./App.css"
 import HomePage from "./components/HomePage"
+import ShopPage from "./components/ShopPage"
 
 
 
@@ -9,7 +10,7 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <HomePage></HomePage>
+      <ShopPage></ShopPage>
     </>
   )
 }
