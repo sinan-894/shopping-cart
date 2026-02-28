@@ -42,7 +42,8 @@ function Item({title,imageUrl,price,rating}){
                     <div className="rating-container">
                         <Star size={12} fill="#e0e52a" color="#e0e52a"></Star><span>{rating}</span>
                     </div>
-                    <ShoppingCart></ShoppingCart>
+                    <button><ShoppingCart></ShoppingCart></button>
+                    
                 </div>
                 <p className="price-tag">${price}</p>
                 <p className="product-title">{title}</p>
