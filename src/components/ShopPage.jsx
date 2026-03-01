@@ -1,18 +1,34 @@
 import { useEffect, useState } from "react";
 import { Star } from 'lucide-react';
 import { ShoppingCart,Plus,Minus } from 'lucide-react';
+import Loading from "./Loading";
+import ErrorPage from "./Error";
 
 function ShopPage(){
     const [dataJson,setData] = useState([])
+    const [error,setError]  = useState(false)
+    const [loading,setLoading]  = useState(true)
     useEffect(()=>{
-        fetch('https://fakestoreapi.com/products')
-        .then(response => response.json())
-        .then(data => {
-            const dataArray = Array.from(data)
-            console.log(dataArray)
-            setData(dataArray)
-        });
+        const fetchData = async  ()=>{
+            try{
+                const response =  await fetch('https://fakestoreapi.com/products');
+                const data  = await response.json()
+                const dataArray = Array.from(data)
+                setData(dataArray)
+            }
+            catch{
+                setError(true)
+            }
+            finally{
+                setLoading(false)
+            }
+            
+        }
+        fetchData()
     },[])
+
+    if(loading) return <Loading/>
+    if(error) return <ErrorPage/>
 
 
     return(
