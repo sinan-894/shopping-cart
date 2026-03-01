@@ -3,8 +3,8 @@ import { Link } from "react-router"
 
 function ErrorPage(){
     return(
-        <div className="error-container">
-            Error!!!
+        <div className="page-container">
+            <h1>Error!!!</h1>
             <Link to='/'><button>HomePage</button></Link>
         </div>
     )

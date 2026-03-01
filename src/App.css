@@ -48,7 +48,7 @@ button:hover{
 
 /* Home Page */
 
-.home-page-container{
+.page-container{
   color: var(--basic-color);
   padding: 100px 0px ;
   display: flex;
@@ -57,7 +57,7 @@ button:hover{
   font-size: 2em;
 }
 
-.home-page-container button{
+.page-container button{
   margin-top: 70px;
   background-color:var(--highlight-color) ;
   color: var(--primary-color);
@@ -69,7 +69,7 @@ button:hover{
 
 
 
-
+/* shop page */
 .shop-container{
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -178,27 +178,6 @@ button:hover{
   text-align: center;
 }
 
-/* error */
-
-.error-container{
- color: var(--basic-color);
- display: flex;
- justify-content: center;
- align-items: center;
- flex-direction: column;
- gap: 20px;
- padding: 100px;
- font-size: 5em;
-}
-
-.error-container button{
-  background-color:var(--highlight-color) ;
-  color: var(--primary-color);
-  padding: 20px;
-  font-size: 0.2em;
-  border-radius: 20px;
-  font-weight: bold;
-}
 
 /* Loading screen */
 

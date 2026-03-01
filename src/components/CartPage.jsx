@@ -1,9 +1,13 @@
 import { Plus,Minus,Trash } from 'lucide-react';
+import { Link } from 'react-router';
+
 
 
 
 function CartPage({cartData}){
     // cartData is a array of object of data {title,imageUrl,price,quantity}
+
+    if(cartData.length===0) return <NoItemsPage/>
 
     const findTotal = ()=>cartData.reduce((total,item)=>total+(item.price*item.quantity),0)
 
@@ -39,6 +43,16 @@ function ListItem({imageurl,title,price,quantity}){
             </div>
             <span className="item-price">${price}</span>
             <button><Trash></Trash></button>
+        </div>
+    )
+}
+
+
+function NoItemsPage(){
+    return(
+        <div className='page-container'>
+            <h1>No Items in The Cart</h1>
+            <Link to='/shop'><button>Shop Page</button></Link>
         </div>
     )
 }
