@@ -174,3 +174,25 @@ button:hover{
   text-align: center;
 }
 
+/* error */
+
+.error-container{
+ color: var(--basic-color);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ gap: 20px;
+ padding: 100px;
+ font-size: 5em;
+}
+
+.error-container button{
+  background-color:var(--highlight-color) ;
+  color: var(--primary-color);
+  padding: 20px;
+  font-size: 0.2em;
+  border-radius: 20px;
+  font-weight: bold;
+}
+

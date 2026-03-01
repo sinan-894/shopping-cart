@@ -3,6 +3,7 @@ import "./App.css"
 import HomePage from "./components/HomePage"
 import ShopPage from "./components/ShopPage"
 import CartPage from "./components/CartPage"
+import ErrorPage from "./components/Error"
 
 
 
@@ -13,7 +14,7 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <ShopPage></ShopPage>
+      <ErrorPage></ErrorPage>
     </>
   )
 }
