@@ -1,12 +1,12 @@
 
 
-function ErrorPage(){
+function NotFoundPage(){
     return(
         <div className="error-container">
-            Error!!!
+            This is Page is Not Found
             <button>HomePage</button>
         </div>
     )
 }
 
-export default ErrorPage
+export default NotFoundPage
