@@ -74,9 +74,14 @@ button:hover{
 }
 
 .item-container{
-  
-  
   color: var(--basic-color);
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
+
+}
+
+.item-container:hover{
+  transform: scale(1.05);
 }
 
 .image-container{
