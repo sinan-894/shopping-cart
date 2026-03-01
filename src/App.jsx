@@ -13,9 +13,10 @@ import NotFoundPage from './components/NotFoundPage'
 function App() {
 
   const {page} = useParams()
+
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar activePage={page}></Navbar>
       {
       (!page)?(
         <HomePage/>
@@ -29,5 +30,6 @@ function App() {
     </>
   )
 }
+
 
 export default App

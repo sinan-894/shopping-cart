@@ -5,6 +5,9 @@
   --highlight-color:#dfe31d;
 }
 
+a{
+  text-decoration: none;
+}
 
 button{
   background-color: var(--secondry-color);
