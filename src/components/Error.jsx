@@ -1,10 +1,11 @@
+import { Link } from "react-router"
 
 
 function ErrorPage(){
     return(
         <div className="error-container">
             Error!!!
-            <button>HomePage</button>
+            <Link to='/'><button>HomePage</button></Link>
         </div>
     )
 }

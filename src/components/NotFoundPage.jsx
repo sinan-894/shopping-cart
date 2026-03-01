@@ -1,10 +1,11 @@
+import { Link } from "react-router"
 
 
 function NotFoundPage(){
     return(
         <div className="error-container">
             This is Page is Not Found
-            <button>HomePage</button>
+            <Link to='/'><button>HomePage</button></Link>
         </div>
     )
 }

@@ -1,15 +1,17 @@
 
 import { ShoppingCart } from 'lucide-react';
+import { Link } from "react-router";
+
 
 function Navbar(){
     return(
         <div className="navbar">
             <div className="navbar-pages">
-                <button>Home Page</button>
-                <button>Shop Page</button>
+                <Link to='/'><button >Home Page</button></Link>
+                <Link to='/shop'><button>Shop Page</button></Link>
             </div>
             <div className="cart-container">
-                <button> <ShoppingCart></ShoppingCart> Cart</button>
+                <Link to='/cart'><button> <ShoppingCart></ShoppingCart> Cart</button></Link>
             </div>
         </div>
     )
