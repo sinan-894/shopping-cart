@@ -17,11 +17,15 @@ function App() {
     <>
       <Navbar></Navbar>
       {
-      (!page)?<HomePage/>:
-      (page=='shop')?<ShopPage/>:
-      (page=='cart')?<CartPage cartData={[]}/>:
-      <NotFoundPage/>
-      }
+      (!page)?(
+        <HomePage/>
+      ) : (page=='shop')?(
+        <ShopPage/>
+      ):(page=='cart')?(
+        <CartPage cartData={[]}/>
+      ):(
+        <NotFoundPage/>
+      )}
     </>
   )
 }
