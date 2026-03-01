@@ -121,6 +121,15 @@ button:hover{
   padding: 30px;
 }
 
+.number-selector{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.number-selector button{
+  background-color: var(--primary-color);
+}
+
 
 /* cart page */
 

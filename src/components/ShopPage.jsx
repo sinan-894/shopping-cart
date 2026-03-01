@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Star } from 'lucide-react';
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart,Plus,Minus } from 'lucide-react';
 
 function ShopPage(){
     const [dataJson,setData] = useState([])
@@ -42,13 +42,25 @@ function Item({title,imageUrl,price,rating}){
                     <div className="rating-container">
                         <Star size={12} fill="#e0e52a" color="#e0e52a"></Star><span>{rating}</span>
                     </div>
-                    <button><ShoppingCart></ShoppingCart></button>
+                    {/* <button><ShoppingCart></ShoppingCart></button> */}
+                    <NumberSelector size={18}></NumberSelector>
                     
                 </div>
                 <p className="price-tag">${price}</p>
                 <p className="product-title">{title}</p>
             </div>
             
+        </div>
+    )
+}
+
+
+function NumberSelector({size}){
+    return(
+        <div className="number-selector" >
+            <button><Minus size={size}></Minus></button>
+            <span className="item-quantity">0</span>
+            <button ><Plus size={size}></Plus></button>
         </div>
     )
 }

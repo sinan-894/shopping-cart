@@ -13,6 +13,7 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
+      <ShopPage></ShopPage>
     </>
   )
 }
