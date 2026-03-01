@@ -5,6 +5,7 @@ import ShopPage from "./components/ShopPage"
 import CartPage from "./components/CartPage"
 import ErrorPage from "./components/Error"
 import Loading from "./components/Loading"
+import { useParams } from "react-router"
 
 
 
@@ -12,10 +13,16 @@ import Loading from "./components/Loading"
 
 function App() {
 
+  const {page} = useParams()
   return (
     <>
       <Navbar></Navbar>
-      <Loading></Loading>
+      {
+      (!page)?<HomePage/>:
+      (page=='shop')?<ShopPage/>:
+      (page=='cart')?<CartPage cartData={[]}/>:
+      null
+      }
     </>
   )
 }
