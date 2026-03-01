@@ -196,3 +196,39 @@ button:hover{
   font-weight: bold;
 }
 
+/* Loading screen */
+
+.loading-screen{
+  font-size: 5em;
+  color: var(--basic-color);
+  padding: 200px;
+  padding-left: 40%;
+}
+
+
+
+.loading-screen::after{
+  content: "";
+  animation: ellipse 1s  infinite;
+}
+
+@keyframes ellipse {
+    from{
+      content: "";
+    }
+    
+    25%{
+      content: ".";
+    }
+
+    50%{
+      content: "..";
+    }
+    75%{
+      content: "...";
+    }
+    to{
+      content: "";
+    }
+}
+
