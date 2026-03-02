@@ -77,12 +77,12 @@ function ListItem({imageurl,title,price,count,cartData,updateData,id}){
             <img src={imageurl} alt="" />
             <span className="item-title">{title}</span>
             <div className="item-qty-container">
-                <button onClick={onAddClick}>
-                    <Plus size={18}></Plus>
-                </button>
-                <span className="item-count">{count}</span>
                 <button onClick={onRemoveClick}>
                     <Minus size={18}></Minus>
+                </button>
+                <span className="item-count">{count}</span>
+                <button onClick={onAddClick}>
+                    <Plus size={18}></Plus>
                 </button>
             </div>
             <span className="item-price">${price}</span>
