@@ -25,7 +25,7 @@ function App() {
       ) : (page=='shop')?(
         <ShopPage cartData={cartData} updateData={setCartData}/>
       ):(page=='cart')?(
-        <CartPage cartData={[]}/>
+        <CartPage cartData={cartData}/>
       ):(
         <NotFoundPage/>
       )}
