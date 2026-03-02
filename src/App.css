@@ -293,17 +293,11 @@ button:hover{
   }
 
   .cart-list-container{
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
     padding: 60px 50px;
   }
 
   .list-container{
-    /* flex-direction: column;
-    align-items: center; */
-    /* padding: 10px 20px; */
-    /* max-width: 300px; */
+    padding: 10px 20px;
   }
 
   .list-container img{
