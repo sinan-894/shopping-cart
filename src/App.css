@@ -61,6 +61,7 @@ button:hover{
   left: 3px;
   width: 120px;
   background-color: var(--secondry-color);
+  z-index: 100;
 }
 
 .drop-down button{
@@ -288,7 +289,7 @@ button:hover{
     background-color: var(--primary-color);
   }
   .shop-container{
-    grid-template-columns: repeat(1,1fr);
+    padding: 20px;
   }
 
   .cart-list-container{
@@ -313,4 +314,13 @@ button:hover{
   }
 
 
+}
+
+@media (max-width:500px){
+  .shop-container{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .image-container{
+    height: auto;
+  }
 }
