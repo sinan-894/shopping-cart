@@ -28,9 +28,9 @@ button:hover{
 }
 
 .navbar-pages{
-  width: 15%;
+  width: 50%;
   display: flex;
-  justify-content: space-between;
+  gap: 50px;
 
 } 
 
