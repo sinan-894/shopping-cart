@@ -113,7 +113,6 @@ function Item({title,imageUrl,price,rating,id,cartData,updateData}){
 
 function NumberSelector({size,count,cartData,updateData,id}){
 
-    console.log(cartData)
     const onAddClick = ()=>{
         updateData({
             ...cartData,
