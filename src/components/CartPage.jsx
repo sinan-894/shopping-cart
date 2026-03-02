@@ -75,18 +75,21 @@ function ListItem({imageurl,title,price,count,cartData,updateData,id}){
     return(
         <div className="list-container">
             <img src={imageurl} alt="" />
-            <span className="item-title">{title}</span>
-            <div className="item-qty-container">
-                <button onClick={onRemoveClick}>
-                    <Minus size={18}></Minus>
-                </button>
-                <span className="item-count">{count}</span>
-                <button onClick={onAddClick}>
-                    <Plus size={18}></Plus>
-                </button>
+            <div className='discription-container'>
+                <span className="item-title">{title}</span>
+                <div className="item-qty-container">
+                    <button onClick={onRemoveClick}>
+                        <Minus size={18}></Minus>
+                    </button>
+                    <span className="item-count">{count}</span>
+                    <button onClick={onAddClick}>
+                        <Plus size={18}></Plus>
+                    </button>
+                </div>
+                <p className="item-price">${price}</p>
+                <button onClick={onDelete}><Trash></Trash></button>
+
             </div>
-            <span className="item-price">${price}</span>
-            <button onClick={onDelete}><Trash></Trash></button>
         </div>
     )
 }
