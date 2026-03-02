@@ -5,6 +5,7 @@ import ShopPage from "./components/ShopPage"
 import CartPage from "./components/CartPage"
 import { useParams } from "react-router"
 import NotFoundPage from './components/NotFoundPage'
+import { useState } from "react"
 
 
 
@@ -13,6 +14,7 @@ import NotFoundPage from './components/NotFoundPage'
 function App() {
 
   const {page} = useParams()
+  const [cartData,setCartData] = useState({})
 
   return (
     <>
@@ -21,7 +23,7 @@ function App() {
       (!page)?(
         <HomePage/>
       ) : (page=='shop')?(
-        <ShopPage/>
+        <ShopPage cartData={cartData} updateData={setCartData}/>
       ):(page=='cart')?(
         <CartPage cartData={[]}/>
       ):(

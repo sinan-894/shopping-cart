@@ -124,6 +124,10 @@ button:hover{
   justify-content: space-between;
 }
 
+.rate-cart button{
+  background-color: var(--primary-color);
+}
+
 
 .item-container img{
   width: 50%;

@@ -4,7 +4,7 @@ import { ShoppingCart,Plus,Minus } from 'lucide-react';
 import Loading from "./Loading";
 import ErrorPage from "./Error";
 
-function ShopPage(){
+function ShopPage({cartData,updateData}){
     const [dataJson,setData] = useState([])
     const [error,setError]  = useState(false)
     const [loading,setLoading]  = useState(true)
@@ -36,7 +36,17 @@ function ShopPage(){
             {dataJson.map((items)=>{
                 const imageUrl = items.image
                 return (
-                    <Item title={items.title} price={items.price} rating={items.rating.rate}  imageUrl={imageUrl} key={items.id}></Item>
+                    <Item 
+                    title={items.title} 
+                    price={items.price} 
+                    rating={items.rating.rate}  
+                    imageUrl={imageUrl}
+                    id={items.id} 
+                    key={items.id}
+                    cartData ={cartData}
+                    updateData = {updateData}
+                    >
+                    </Item>
                 )
             })}
         </div>
@@ -47,7 +57,25 @@ function ShopPage(){
 export default ShopPage
 
 
-function Item({title,imageUrl,price,rating}){
+function Item({title,imageUrl,price,rating,id,cartData,updateData}){
+    let displayCartLogo = true
+    if(cartData[id] && cartData[id].count) displayCartLogo = false
+
+    const onCartClick = ()=>{
+        updateData({
+            ...cartData,
+            [id]:{
+                title,
+                imageUrl,
+                price,
+                count:1
+            }
+        })
+
+    }
+
+
+
     return(
         <div className="item-container">
             <div className="image-container">
@@ -58,8 +86,20 @@ function Item({title,imageUrl,price,rating}){
                     <div className="rating-container">
                         <Star size={12} fill="#e0e52a" color="#e0e52a"></Star><span>{rating}</span>
                     </div>
-                    {/* <button><ShoppingCart></ShoppingCart></button> */}
-                    <NumberSelector size={18}></NumberSelector>
+                    {
+                        (displayCartLogo)?(
+                        <button onClick={onCartClick}><ShoppingCart></ShoppingCart></button>
+                        ):(
+                        <NumberSelector 
+                        size={18} 
+                        count={cartData[id].count}
+                        cartData={cartData}
+                        updateData={updateData}
+                        id={id}
+                        ></NumberSelector>
+                        )
+                    }
+                    
                     
                 </div>
                 <p className="price-tag">${price}</p>
@@ -71,12 +111,37 @@ function Item({title,imageUrl,price,rating}){
 }
 
 
-function NumberSelector({size}){
+function NumberSelector({size,count,cartData,updateData,id}){
+
+    console.log(cartData)
+    const onAddClick = ()=>{
+        updateData({
+            ...cartData,
+            [id]:{
+                ...cartData[id],
+                count:cartData[id].count+1
+            }
+
+        })
+    }
+
+    const onRemoveClick = ()=>{
+        updateData({
+            ...cartData,
+            [id]:{
+                ...cartData[id],
+                count:cartData[id].count-1
+            }
+
+        })
+    }
+
+
     return(
         <div className="number-selector" >
-            <button><Minus size={size}></Minus></button>
-            <span className="item-quantity">0</span>
-            <button ><Plus size={size}></Plus></button>
+            <button onClick={onRemoveClick}><Minus size={size}></Minus></button>
+            <span className="item-quantity">{count}</span>
+            <button onClick={onAddClick} ><Plus size={size}></Plus></button>
         </div>
     )
 }

@@ -5,18 +5,18 @@ import { Link } from 'react-router';
 
 
 function CartPage({cartData}){
-    // cartData is a array of object of data {title,imageUrl,price,quantity}
+    // cartData is a array of object of data {title,imageUrl,price,count}
 
     if(cartData.length===0) return <NoItemsPage/>
 
-    const findTotal = ()=>cartData.reduce((total,item)=>total+(item.price*item.quantity),0)
+    const findTotal = ()=>cartData.reduce((total,item)=>total+(item.price*item.count),0)
 
     const total = findTotal().toFixed(2)
     return(
         <div className="cart-list-container">
             <h1 style={{textAlign:'center'}}>Total : ${total}</h1>
             {cartData.map((item)=>(
-                <ListItem imageurl={item.imageurl} title={item.title} price={item.price} quantity={item.quantity}></ListItem>
+                <ListItem imageurl={item.imageurl} title={item.title} price={item.price} count={item.count}></ListItem>
             ))}
 
         </div>
@@ -27,7 +27,7 @@ function CartPage({cartData}){
 export default CartPage
 
 
-function ListItem({imageurl,title,price,quantity}){
+function ListItem({imageurl,title,price,count}){
     return(
         <div className="list-container">
             <img src={imageurl} alt="" />
@@ -36,7 +36,7 @@ function ListItem({imageurl,title,price,quantity}){
                 <button >
                     <Plus size={18}></Plus>
                 </button>
-                <span className="item-quantity">{quantity}</span>
+                <span className="item-count">{count}</span>
                 <button >
                     <Minus size={18}></Minus>
                 </button>
