@@ -223,8 +223,8 @@ button:hover{
 .loading-screen{
   font-size: 5em;
   color: var(--basic-color);
-  padding: 200px;
-  padding-left: 40%;
+  padding: 200px 0px;
+  text-align: center;
 }
 
 
